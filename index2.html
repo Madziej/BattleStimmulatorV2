@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Ga+Maamli&display=swap" rel="stylesheet">
+   
+   
+    <title>Character's Creation</title>
+
+    <style>
+body {
+            background-color: #4B2E2E; 
+            background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg'); 
+            background-repeat: repeat; 
+            color: white; 
+        }
+
+
+.titleContainer{
+
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 5px solid #FFF;
+    border: radius 15px;
+    border-color: #c3822e;
+    padding: 3px;
+    margin: 20px;
+    background-color: rgba(0,0,0,0.5);
+
+    
+}
+
+.title, .text {
+
+    font-family: 'MedievalSharp', cursive; 
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+
+
+.formContainer{
+
+    display: flex;
+    flex-direction: column;
+    
+
+    border: 5px solid #FFF;
+    border: radius 15px;
+    border-color: #c3822e;
+    padding: 3px;
+    margin: 20px;
+    background-color: rgba(0,0,0,0.75);
+}
+
+
+.Section1{
+    font-family: 'MedievalSharp', cursive; 
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: large;
+
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+}
+
+.characterForm{
+
+    font-family: 'MedievalSharp', cursive; 
+            
+          
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: medium;
+
+
+
+}
+
+
+
+.submit{
+
+    margin-top: 5px;
+    margin-bottom: 3px;
+    background-color: darkgreen;
+
+        font-family: 'Franklin Gothic Medium';
+
+        font-family: "Baskervville SC", serif;
+        font-weight: 400;
+         font-style: normal;
+        color: rgb(225, 188, 86);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.5);
+}
+
+.statistics{
+
+    font-family: 'MedievalSharp', cursive; 
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: large;
+
+    border: radius 10px;
+
+
+    display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+}
+
+
+.hitPoints {
+            display: flex;
+            align-items: center;
+            margin: 1px;
+        }
+        .hitPoints h5 {
+            margin: 0 10px;
+        }
+        .hitPoints button {
+            margin-left: 10px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+
+
+.attackPower {
+            display: flex;
+            align-items: center;
+            margin: 1px;
+        }
+        .attackPower h5 {
+            margin: 0 10px;
+        }
+        .attackPower button {
+            margin-left: 10px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }       
+
+.hitChance {
+            display: flex;
+            align-items: center;
+            margin: 1px;
+        }
+        .hitChance h5 {
+            margin: 0 10px;
+        }
+        .hitChance button {
+            margin-left: 10px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+
+
+.initiative {
+            display: flex;
+            align-items: center;
+            margin: 1px;
+        }
+        .initiative h5 {
+            margin: 0 10px;
+        }
+        .initiative button {
+            margin-left: 10px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+
+
+.hitPoints,.hitChance,.attackPower,.initiative{
+    display: flex;
+            align-items: center;
+            margin: px ;
+            padding: 1px;
+            border: 1px solid #c3822e;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+}        
+
+.equipment{
+
+    font-family: 'MedievalSharp', cursive; 
+    background: linear-gradient(45deg, #FFD700, #FF8C00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: large;
+
+    border: radius 10px;
+
+
+
+}        
+
+.equipment-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        .armor, .weapon, .amulet {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #c3822e;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .equipment {
+            flex-direction: column;
+            text-align: center;
+        }
+        .armor h5, .weapon h5, .amulet h5 {
+            margin: 0 10px;
+        }
+        .armor button, .weapon button, .amulet button {
+            margin-left: 10px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+
+.end{
+
+
+
+
+    margin-left: 10px;
+            background-color: darkgreen;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 5px;
+            margin-bottom: 8px;
+
+
+            font-family: 'MedievalSharp', cursive; 
+            background: linear-gradient(45deg, #a09032, #ff4d00);
+            font-size: large;
+
+
+}       
+
+.errorWindow {
+
+
+    color: #ff4d00;
+}
+
+    </style>
+</head>
+<body>
+
+<center>
+<div id="titleContainer" class="titleContainer">
+<h1 id="title" class="title">Character's Creator</h1>
+<h2 id="text" class="text">Before You'll face Your opponent, the statistics card must be prepared! <br>
+                         Your character can represent power in many ways. You can decide to be durable, strong or fast as a wind!<br>
+                         Complete all sections of the form below.  </h2>
+
+</center>
+</div>
+
+
+<div id="formContainer" class="formContainer"> 
+<center>
+<h2 class="Section1"> Section 1 <br>
+    Name, Race, Class</h2>
+</center>
+
+
+    <form id="characterForm" class="characterForm">
+        <label for="name" class="name">Character name:</label>
+        <input type="text" id="name" name="name" required>
+        
+    <br>    
+
+    <label for="race" class="race">Race:</label>    
+    <select id="race" name="race" required onchange="selectRace()">   
+    <option value="Human">Human</option> 
+    <option value="Elf">Elf</option>
+    <option value="Dwarf">Dwarf</option>  
+    </select> 
+
+<br>
+
+    <label for="class" class="class">Class:</label>
+    <select id="class" name="class" required onchange="selectProfession()">
+        <option value="Warrior">Warrior</option>
+        <option value="Barbarian">Barbarian</option>
+        <option value="Rogue">Rogue</option>
+    </select>
+
+    <br>
+    <button class="submit"  type="submit" onclick="setCharacterName()">Check Name</button>
+    <div id="errorName" class="errorName"></div>
+       
+
+    <div id="statistics" class="statistics"></div>
+
+    <div id="statistics" class="statistics">Section 2 <br>Statistics<br><br></div>
+        <div id="hitPoints" class="hitPoints">Hit Points: <button id="hpButton" onclick="generateHitPoints()">Roll the dice!</button> <h5 id="hpResult">Let's Roll</h5> <h5> +     BONUS: </h5><h5 id="hpModifier"></h5><h5> = </h5><h5 id="finalHpResult"></h5></div>
+        <div id="attackPower" class="attackPower">Attack Power:  <button id="apButton" onclick="generateAttackPower()">Roll the dice!</button><h5 id="apResult">Let's Roll</h5><h5> +    BONUS: </h5><h5 id="apModifier"></h5><h5> = </h5><h5 id="finalApResult"></h5></div>
+        <div id="hitChance" class="hitChance">Hit Chance: <button id="hcButton" onclick="generateHitChance()">Roll the dice!</button><h5 id="hcResult">Let's Roll</h5> <h5> +       BONUS: </h5><h5 id="hcModifier"></h5><h5> = </h5><h5 id="finalHcResult"></h5> </div>
+        <div id="initiative" class="initiative">Initiative: <button id="iniButton" onclick="generateInitiative()">Roll the dice!</button><h5 id="iniResult">Let's Roll</h5> <h5> +       BONUS: </h5><h5 id="iniModifier"></h5><h5> = </h5><h5 id="finalIniResult"></h5></div>
+        
+
+
+    <br><br>
+
+    <div id="equipment" class="equipment"> Section 3 <br> Equipment <br><br></div>
+    <div id="armor" class="armor">Armor: <button id="armorButton" onclick="generateArmor()">Roll the dice!</button><h5 id="armorResult"></h5> <h5>Damage Absorb: </h5><h5 id="damageAbsorb"></h5></div>
+    <div id="weapon" class="weapon">Weapon: <button id="weaponButton" onclick="generateWeapon()">Roll the dice!</button><h5 id="weaponResult"></h5> <h5>Damage Bonus: </h5><h5 id="damageBonus"></h5></div>
+    <div id="amulet" class="amulet">Amulet: <button id="amuletButton" onclick="generateAmulet()">Roll the dice!</button><h5 id="amuletResult"></h5><h5 id="amuletModifier"></h5></div>
+    <script src="form.js"></script>
+</form>
+
+
+
+
+<button id="end" class="end" onclick="endButtonHandler()">End!</button>
+<div id="errorWindow" class="errorWindow"></div>
+</div>
+
+
+
+
+
+
+</body>
+</html>

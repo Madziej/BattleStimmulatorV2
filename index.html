@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Ga+Maamli&display=swap" rel="stylesheet">
+
+
+    <title>Fantasy Battle Simmulator V2</title>
+
+<style>
+
+body {
+            background-color: #4B2E2E; 
+            background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg'); 
+            background-repeat: repeat; 
+            color: white; 
+        }
+
+
+
+
+
+.headline{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    /* 
+    font-family: "Ga Maamli", sans-serif;
+    font-style:italic;
+    font-size:xx-large;  */
+
+    /*height: 100vh;*/
+    /*font-family: 'Lucida Grande';  */
+
+    /* Ramka  */
+    border: 5px solid #FFF;
+    border: radius 15px;
+    border-color: #c3822e;
+    padding: 3px;
+    margin: 20px;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+
+.headline h2, .headline h1 {
+            font-family: 'MedievalSharp', cursive; 
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+
+
+.quote-container{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    font-family: "Baskervville SC", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(225, 188, 86);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+
+
+
+    border: 5px solid #FFF;
+    border: radius 5px;
+    border-color: #c3822e;
+    padding: 7px;
+    margin: 5px;
+    
+    background-color: rgba(0,0,0,0.5);
+    background-color: #4B2E2E; 
+
+    width:60%;
+    max-width: 600px;
+    margin: 20px auto;
+
+}
+
+.quoteButton{
+
+    border-radius: 10px;
+    background-color: #511f1f;
+    color:#ff8800;
+    font-family: sans-serif;
+    font-style:italic;
+    font-size:medium;
+
+}
+
+
+.welcomer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1px;
+    background-color:rgba(0, 0, 0, 0.5);
+    color: #FF8C00;
+    font-family: 'Times New Roman';
+
+    border: 5px solid #FFF;
+    border: radius 5px;
+    border-color: #c3822e;
+    padding: 7px;
+    margin: 5px;
+
+}
+
+
+
+.starterButton{
+
+        background-color: darkgreen;
+
+        font-family: 'Franklin Gothic Medium';
+
+        font-family: "Baskervville SC", serif;
+        font-weight: 400;
+         font-style: normal;
+        color: rgb(225, 188, 86);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.5);
+
+}
+
+.basicInfo{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+    <div id="headline" class="headline">
+        <h2>Fantasy Battle Simulator</h2>
+        <h1>V2</h1>
+    </div>
+
+    
+    <div id="quote-container" class="quote-container">
+        <center>
+        <div id="quote" class="quote">"Never interrupt your enemy when he is making a mistake."</div>
+        <div id="author" class="author">"Napoleon Bonaparte"</div>
+        <button id="quoteButton" class="quoteButton" onclick="displayRandomQuote()">Get inspired by another quote now!</button>
+        <script src="quoteGenerator.js"></script>
+        </center>
+    </div>
+
+
+
+    <div id="welcomer" class="welcomer">
+        <h3>Welcome to the FBSV2!</h3>
+        <h4>The game will deliver to You unforgetting experience of battle in fantasy world!</h4>
+        <h4>To start, You need only to click button below!</h4>
+
+        <button id="starterButton" class="starterButton">START GAME</button>
+        <script>
+            document.getElementById("starterButton").addEventListener("click", function() {
+                window.location.href = "index2.html"; 
+            });
+        </script>
+    </div>
+
+
+<center>
+    <h6 id="basicInfo" class="basicInfo">This game has been produced for educational purposes. <br>
+        The producer do not own rights to many graphic elements and does not care to monetize this project.<br>
+        Feel free to share with coding advices! <br>
+        Author: Maciej Bardo <br>
+        July 2024 <br></h6>
+        </center>
+</body>
+</html>

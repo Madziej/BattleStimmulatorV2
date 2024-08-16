@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Ga+Maamli&display=swap" rel="stylesheet">
+    <title>Choose Your Opponent</title>
+    <style>
+        body {
+            background-color: #4B2E2E; 
+            background-image: url('https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg'); 
+            background-repeat: repeat; 
+            color: white; 
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .cheesyImageSocket1, .cheesyImageSocket2, .titleContainer, .playerAvatarSocket, .opponent, .errorLog {
+            display: flex;
+            border: 5px solid #FFF;
+            border-radius: 15px;
+            border-color: #c3822e;
+            padding: 3px;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .cheesyImageSocket1, .cheesyImageSocket2 {
+            margin: 0;
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-image: url('Torch.png'); /* Placeholder image */
+        }
+
+        .titleContainer {
+            flex-grow: 1;
+            text-align: center;
+            margin: 0 20px;
+            font-family: 'Ga Maamli', serif; 
+            font-size: xx-large;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .titleText {
+            font-family: 'MedievalSharp', cursive; 
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .mainContent {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            height: 1000 px;
+        }
+
+        #playerCard {
+            position: relative;
+            margin: 20px;
+            padding: 20px;
+            border: 5px solid #FFF;
+            border-radius: 15px;
+            border-color: #c3822e;
+            background-color: rgba(0,0,0,0.5);
+            width: 250px;
+            height: 470px;
+            
+        }
+
+        .playerAvatarSocket {
+            position: absolute;
+            top: 10px; 
+            right: 10px; 
+            width: 100px;
+            height: 100px;
+            background-size: cover;
+           
+        }
+
+        .playerCardText{
+            position:absolute;
+            left: 10px;
+            font-family: 'MedievalSharp', cursive; 
+            background: linear-gradient(45deg, #FFD700, #FF8C00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: medium;
+
+        }
+
+
+        .opponentList {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            padding: 20px;
+            border: 5px solid #FFF;
+            border-radius: 15px;
+            border-color: #c3822e;
+            background-color: rgba(0,0,0,0.5);
+            width: 400px;
+            height: 400px; 
+            overflow-y: scroll; 
+        }
+
+        .opponent {
+            display: flex;
+            
+            margin: 10px 0;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            
+        }
+
+        .opponentInfo {
+            margin-left: 10px;
+            font-size: 15px;
+        }
+
+        .opponentAvatar {
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            background-image: url('Opponent1.jpg'); /* Placeholder image */
+        }
+
+        .errorLogs {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 20px;
+            width: 200px;
+        }
+
+        .errorLog {
+            height: 100px;
+            margin: 10px 0;
+            padding: 10px;
+            overflow-y: auto;
+        }
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin: 20px;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        .startBattle {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="cheesyImageSocket1" class="cheesyImageSocket1"></div>
+        <div id="titleContainer" class="titleContainer">
+            <h5 id="titleText" class="titleText">CHOOSE YOUR OPPONENT</h5>
+        </div>
+        <div id="cheesyImageSocket2" class="cheesyImageSocket2"></div>
+    </div>
+    <div class="mainContent">
+        <div id="playerCard">
+            <div id="playerAvatarSocket" class="playerAvatarSocket"><img id="playerAvaratSockett"></div>
+            <h5 id="playerCardText" class="playerCardText">
+          
+        </div>
+        
+        <div class="opponentList">
+        <div id="opponentContainer" class="opponentContainer" onload="displayOpponents()">
+           
+            <label id="opponentChoice" class="opponentChoice" onclick="opponentChoiceByUser()">
+            <input type="radio" name="opponent" value="opponent1">
+            <div id="opponent1" class="opponent"></div> 
+           
+            
+                <input type="radio" name="opponent" value="opponent2">
+            <div id="opponent2" class="opponent"></div> 
+
+            
+                <input type="radio" name="opponent" value="opponent3">
+            <div id="opponent3" class="opponent"></div> 
+
+            
+                <input type="radio" name="opponent" value="opponent4">
+            <div id="opponent4" class="opponent"></div> 
+
+            
+                <input type="radio" name="opponent" value="opponent5">
+            <div id="opponent5" class="opponent"></div> 
+
+            
+                <input type="radio" name="opponent" value="opponent6">
+            <div id="opponent6" class="opponent"></div> 
+
+            
+                <input type="radio" name="opponent" value="opponent7">
+            <div id="opponent7" class="opponent"></div></label>
+        </div>
+        </div>
+        <script src="index3.js"></script>
+
+        <div id="cheesyImageSocket2Extras">
+            <div class="errorLogs">
+                <div id="errorLog1" class="errorLog"></div>
+                <div id="errorLog2" class="errorLog"></div>
+            </div>
+            <div class="controls">
+                <button id="randomizeEnemy" onclick="randomizeEnemy()">Randomize Enemy!</button>
+                <button id="startBattle" class="startBattle" onclick="startButton()">Start Battle</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
